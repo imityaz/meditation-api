@@ -8,16 +8,20 @@
     ],
     "routes": [
       {
-        "src": "./routes/userRoutes",
-        "dest": "/api/user"
+        "src": "/api/user",
+        "dest": "/app.js"
       },
       {
-        "src": "./routes/communityRoutes",
-        "dest": "/api/community"
+        "src": "/api/community",
+        "dest": "/app.js"
       },
       {
         "src": "/api/community-posts",
-        "dest": "/"
+        "dest": "/app.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/app.js"
       }
     ]
   }
