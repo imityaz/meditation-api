@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 const userRoutes = require("./routes/userRoutes")
 const communityRoutes = require("./routes/communityRoutes")
 app.use(cors({
-    origin: 'http://127.0.0.1:5173',
+    origin: 'https://meditation-12aaf.web.app',
     optionsSuccessStatus: 200,
   }));
 app.use("/api/user", userRoutes);
