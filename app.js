@@ -11,8 +11,12 @@ const PORT = process.env.PORT || 5000;
 
 const userRoutes = require("./routes/userRoutes")
 const communityRoutes = require("./routes/communityRoutes")
+const allowedOrigins = [
+  'https://meditation-12aaf.firebaseapp.com',
+  'https://meditation-12aaf.web.app'
+];
 app.use(cors({
-    origin: 'https://meditation-12aaf.firebaseapp.com',
+    origin: allowedOrigins,
     optionsSuccessStatus: 200,
   }));
 app.use("/api/user", userRoutes);
